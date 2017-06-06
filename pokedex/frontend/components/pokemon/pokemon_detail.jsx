@@ -14,18 +14,23 @@ class PokemonDetail extends React.Component {
   }
 
   // componentWillReceiveProps(newProps){
-  //   if (this.match.params.pokemon.id !== newProps.match.params.pokemon.id){
+  //   if (this.props.pokemon.id !== newProps.match.params.pokemon.id){
   //     this.props.requestSinglePokemon(newProps.match.params.pokemon.id);
   //   }
   // }
 
   render() {
-    const { pokemon } = this.props;
+    const { pokemon, items, loading } = this.props;
+    console.log(this.props);
+    if (!pokemon) {
+      return null;
+    }
+
+    console.log("HI");
     return(
       <div>
-        <img src={pokemon.image_url} alt={pokemon.name} />
+        <img src={pokemon.image_url} />
         <ul className="poke">
-
           <li><h2>{pokemon.name}</h2></li>
         </ul>
       </div>
