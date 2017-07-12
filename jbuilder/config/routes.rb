@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :guests, only: [:show, :index] do
       resources :gifts, only: [:index];
     end
+
+    resources :gifts, only: [:show];
   end
 
 end
