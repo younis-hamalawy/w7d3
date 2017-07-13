@@ -3,6 +3,7 @@ import pokemonReducer from './pokemon_reducer';
 
 
 const rootReducer = combineReducers({
+  // state shape
   pokemon: pokemonReducer
 });
 
