@@ -11,6 +11,7 @@ import { HashRouter, Route } from 'react-router-dom';
 document.addEventListener('DOMContentLoaded', () => {
   const rootEl = document.getElementById('root');
   const store = configureStore();
+
   // window.store = store;
   // window.fetchAllPokemon = fetchAllPokemon;
   // window.receiveAllPokemon = receiveAllPokemon;

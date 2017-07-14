@@ -1,6 +1,7 @@
 import React from 'react';
 import { requestSinglePokemon } from '../../actions/pokemon_actions';
 import PokemonIndexItem from './pokemon_index_item';
+import PokemonDetailContainer from './pokemon_detail_container';
 
 
 class PokemonDetail extends React.Component {
@@ -19,11 +20,13 @@ class PokemonDetail extends React.Component {
   // }
 
   render() {
-    const poke = this.props.pokemon.id;
+    const { pokemon } = this.props;
     return(
       <div>
-        <ul className="pokes">
-           <PokemonIndexItem key={poke.id} poke={poke} />
+        <img src={pokemon.image_url} alt={pokemon.name} />
+        <ul className="poke">
+
+          <li><h2>{pokemon.name}</h2></li>
         </ul>
       </div>
     );
